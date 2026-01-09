@@ -1,17 +1,17 @@
 export const siteConfig = {
   couple: {
-    bride: "Catherine Rivera",
-    brideNickname: "Catherine",
-    groom: "Mark Niño Cabral",
-    groomNickname: "Mark",
+    bride: "Queenee Anngil Dauz",
+    brideNickname: "Queenee",
+    groom: "Joseph Christian Fermin",
+    groomNickname: "JC",
   },
   wedding: {
-    date: "January 11, 2026",
+    date: "February 22, 2026",
     time: "3:00 PM",
-    venue: "Lorenzo Farm and Resort and Events Place / Balai Alexandria Events Place",
+    venue: "The Courtyard at Lakewood City, Cabanatuan City, Nueva Ecija",
     tagline: "are getting married!",
-    theme: "Purple & Sage Motif",
-    motif: "#6A4F82, #B9AACB, #A8AF8D, #F4F4F4, #5B6B3C",
+    theme: "Blush Pink, Champagne, Beige, Rose Gold",
+    motif: "#F4C2C2, #F7E7CE, #F5F5DC, #E8B4B8",
   },
   details: {
     rsvp: {
@@ -19,30 +19,30 @@ export const siteConfig = {
     },
   },
   ceremony: {
-    location: "Lorenzo Farm and Resort and Events Place, Brgy Dampulan Jaen Nueva Ecija",
-    venue: "Lorenzo Farm and Resort and Events Place",
-    date: "January 11, 2026",
+    location: "The Courtyard at Lakewood City, Cabanatuan City, Nueva Ecija",
+    venue: "The Courtyard at Lakewood City",
+    date: "February 22, 2026",
     day: "Sunday",
     time: "3:00 PM",
     entourageTime: "2:30 PM",
     guestsTime: "2:30 PM",
   },
   reception: {
-    location: "Balai Alexandria Events Place, Brgy Dampulan Jaen Nueva Ecija",
-    venue: "Balai Alexandria Events Place",
-    date: "January 11, 2026",
+    location: "The Courtyard at Lakewood City, Cabanatuan City, Nueva Ecija",
+    venue: "The Courtyard at Lakewood City",
+    date: "February 22, 2026",
     time: "Reception to follow",
   },
   dressCode: {
-    theme: "Purple & Sage Motif",
-    colors: ["#6A4F82", "#B9AACB", "#A8AF8D", "#F4F4F4", "#5B6B3C"],
+    theme: "Blush Pink, Champagne, Beige, Rose Gold",
+    colors: ["#F4C2C2", "#F7E7CE", "#F5F5DC", "#E8B4B8"],
     sponsors: {
-      male: "Barong, Black Pants and Leather Shoes",
-      female: "Purple/Lavender/Sage Long Gown"
+      male: "Barong, Slacks, leather shoes",
+      female: "Shades of Beige, Blush pink, rose gold"
     },
     guests: {
-      gents: "Polo & Pants (Strictly no Tshirt)",
-      ladies: "Formal Dress/Gown/Suit"
+      gents: "Suit, Long Sleeve, Slacks",
+      ladies: "Long Gown, Maxi or Cocktail Dress"
     },
     note: "We kindly request our guests to dress in formal attire with a color of our motif."
   },
@@ -63,8 +63,8 @@ Now, as they prepare to say yes before God and the people they love most, Cather
     secondary: "#B9AACB",
   },
   snapShare: {
-    googleDriveLink: "https://drive.google.com/drive/folders/1gFI7Q-1J85w2gwOQ-Ugkakeei2poqBM8?usp=sharing",
-    hashtag: "#CatherineAndMark2026",
+    googleDriveLink: "https://drive.google.com/drive/folders/1PavE86obEedEUGQwWcprTmiqv8eDakS4?usp=sharing",
+    hashtag: "#JCfoundhisQUEENee",
     instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
 }

@@ -6,21 +6,21 @@ import { Cormorant_Garamond, Cinzel } from "next/font/google"
 import { siteConfig } from "@/content/site"
 
 const desktopImages = [
-  "/desktop-background/couple (1).jpg",
-  "/desktop-background/couple (2).jpg",
-  "/desktop-background/couple (3).jpg",
-  "/desktop-background/couple (4).jpg",
-  "/desktop-background/couple (5).jpg",
+  "/desktop-background/couple (1).webp",
+  "/desktop-background/couple (2).webp",
+  "/desktop-background/couple (3).webp",
+  "/desktop-background/couple (4).webp",
+  "/desktop-background/couple (5).webp",
 
 ]
 
 const mobileImages = [
-  "/mobile-background/couple (1).jpg",
-  "/mobile-background/couple (2).jpg",
-  "/mobile-background/couple (3).jpg",
-  "/mobile-background/couple (5).jpg",
-  "/mobile-background/couple (6).jpg",
-  "/mobile-background/couple (7).jpg",
+  "/mobile-background/couple (1).webp",
+  "/mobile-background/couple (2).webp",
+  "/mobile-background/couple (3).webp",
+  "/mobile-background/couple (5).webp",
+  "/mobile-background/couple (6).webp",
+  "/mobile-background/couple (7).webp",
 ]
 
 const SHOW_BUTTERFLIES = false
@@ -111,7 +111,7 @@ export function Hero() {
     : "THU"
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#6A4F82]">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FAB1AA]">
       <div className="absolute inset-0 w-full h-full">
         {imagesLoaded && backgroundImages.map((image, index) => (
           <div
@@ -128,10 +128,10 @@ export function Hero() {
             }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#6A4F82]/90 via-[#B9AACB]/70 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#5B6B3C]/75 z-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(185,170,203,0.3),transparent_55%)] mix-blend-screen" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(168,175,141,0.28),transparent_35%)] opacity-70 animate-[pulse_9s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FAB1AA]/90 via-[#FAB1AA]/70 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#FAB1AA]/75 z-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(250,177,170,0.3),transparent_55%)] mix-blend-screen" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(250,177,170,0.28),transparent_35%)] opacity-70 animate-[pulse_9s_ease-in-out_infinite]" />
       </div>
 
       {SHOW_BUTTERFLIES && (
@@ -477,9 +477,9 @@ export function Hero() {
                 textShadow: "0 0 24px rgba(0,0,0,0.9)",
               }}
             >
-              <span className="block">{brideName}</span>
-              <span className="block">&</span>
               <span className="block">{groomName}</span>
+              <span className="block">&</span>
+              <span className="block">{brideName}</span>
             </h1>
           </div>
 
@@ -583,18 +583,20 @@ export function Hero() {
             <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch">
             <a
               href="#guest-list"
-              className={`${cormorant.className} group relative flex-1 sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9AACB]/70`}
+              className={`${cormorant.className} group relative flex-1 sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B47377]/70`}
               style={{
-                backgroundColor: "#6A4F82",
-                boxShadow: "0 10px 24px rgba(106,79,130,0.4)",
+                backgroundColor: "#B47377",
+                boxShadow: "0 10px 24px rgba(180,115,119,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#B9AACB";
-                e.currentTarget.style.boxShadow = "0 12px 28px rgba(106,79,130,0.5)";
+                e.currentTarget.style.backgroundColor = "#B47377";
+                e.currentTarget.style.opacity = "0.9";
+                e.currentTarget.style.boxShadow = "0 12px 28px rgba(180,115,119,0.5)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#6A4F82";
-                e.currentTarget.style.boxShadow = "0 10px 24px rgba(106,79,130,0.4)";
+                e.currentTarget.style.backgroundColor = "#B47377";
+                e.currentTarget.style.opacity = "1";
+                e.currentTarget.style.boxShadow = "0 10px 24px rgba(180,115,119,0.4)";
               }}
             >
               <span className="relative z-10 inline-flex h-full min-h-[3rem] sm:min-h-[3.25rem] w-full items-center justify-center px-6 sm:px-8 text-[0.65rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.32em] sm:tracking-[0.36em] text-[#F4F4F4] font-semibold transition-all duration-300" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.3)" }}>

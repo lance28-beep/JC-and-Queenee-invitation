@@ -38,7 +38,7 @@ function CountdownUnit({ value, label }: CountdownUnitProps) {
       {/* Elegant card with subtle hover glow */}
       <div className="relative w-full max-w-[88px] sm:max-w-[96px] md:max-w-[110px] lg:max-w-[120px] group">
         {/* Glow on hover */}
-        <div className="pointer-events-none absolute -inset-[3px] rounded-2xl bg-gradient-to-br from-[#E9D5C3]/28 via-[#9B7C6A]/18 to-transparent opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="pointer-events-none absolute -inset-[3px] rounded-2xl bg-gradient-to-br from-[#FAB1AA]/28 via-[#B47377]/18 to-transparent opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
         <div className="pointer-events-none absolute inset-0 rounded-2xl bg-white/5 blur-xl opacity-70" />
 
         {/* Main card */}
@@ -173,9 +173,9 @@ export function Countdown() {
       id="countdown"
       className="relative bg-transparent py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
     >
-      {/* Soft lavender overlay for readability */}
-      <div className="pointer-events-none absolute inset-0 bg-[#B9AACB]/45 sm:bg-[#B9AACB]/40 backdrop-blur-[1px]" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#B9AACB]/55 via-transparent to-[#B9AACB]/65" />
+      {/* Soft overlay for readability */}
+      <div className="pointer-events-none absolute inset-0 bg-[#FAB1AA]/45 sm:bg-[#FAB1AA]/40 backdrop-blur-[1px]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#FAB1AA]/55 via-transparent to-[#FAB1AA]/65" />
 
       {/* Monogram - centered at top */}
       <div className="relative flex justify-center pt-8 sm:pt-10 md:pt-12 mb-6 sm:mb-8 md:mb-10 z-10">
@@ -187,8 +187,8 @@ export function Countdown() {
         >
           <div className="relative w-72 h-72 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] xl:w-[40rem] xl:h-[40rem] opacity-90">
             <Image
-              src="/monogram/monogram.png"
-              alt={`${brideNickname} & ${groomNickname} Monogram`}
+              src="/monogram/mongoram.png"
+              alt={`${groomNickname} & ${brideNickname} Monogram`}
               fill
               className="object-contain"
               style={{
@@ -208,7 +208,7 @@ export function Countdown() {
         {/* Decorative element above title */}
         <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
           <div className="w-8 sm:w-12 md:w-16 h-px bg-white/25" />
-          <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#A8AF8D] to-[#5B6B3C] rounded-full shadow-[0_0_12px_rgba(168,175,141,0.9)]" />
+          <div className="w-1.5 h-1.5 bg-[#B47377] rounded-full shadow-[0_0_12px_rgba(180,115,119,0.9)]" />
           <div className="w-8 sm:w-12 md:w-16 h-px bg-white/25" />
         </div>
         
@@ -217,7 +217,7 @@ export function Countdown() {
         </h2>
         
         <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/95 font-light max-w-xl mx-auto leading-relaxed px-2">
-          Every heartbeat brings us closer to the moment when two hearts become one. Join {brideNickname} and {groomNickname} as they count down to forever.
+          Every heartbeat brings us closer to the moment when two hearts become one. Join {groomNickname} and {brideNickname} as they count down to forever.
         </p>
         
         {/* Decorative element below subtitle */}

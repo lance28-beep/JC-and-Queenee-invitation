@@ -8,19 +8,20 @@ interface HeroProps {
 }
 
 const desktopImages: string[] = [
-  '/desktop-background/couple (1).jpg',
-  '/desktop-background/couple (2).jpg',
-  '/desktop-background/couple (3).jpg',
-  '/desktop-background/couple (4).jpg',
-  '/desktop-background/couple (5).jpg',
+  '/desktop-background/couple (1).webp',
+  '/desktop-background/couple (2).webp',
+  '/desktop-background/couple (3).webp',
+  '/desktop-background/couple (4).webp',
+  '/desktop-background/couple (5).webp',
 ];
 
 const mobileImages: string[] = [
-  '/mobile-background/couple (1).jpg',
-  '/mobile-background/couple (2).jpg',
-  '/mobile-background/couple (3).jpg',
-  '/mobile-background/couple (6).jpg',
-  '/mobile-background/couple (7).jpg',
+  '/mobile-background/couple (1).webp',
+  '/mobile-background/couple (2).webp',
+  '/mobile-background/couple (3).webp',
+  '/mobile-background/couple (4).webp',
+  '/mobile-background/couple (5).webp',
+  '/mobile-background/couple (6).webp',
 ];
 
 export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
@@ -63,9 +64,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
           />
         ))}
 
-        {/* Soft overlay tint with purple and sage gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#6A4F82]/40 via-[#B9AACB]/35 to-[#A8AF8D]/40 pointer-events-none" />
-        <div className="absolute inset-0 bg-[#6A4F82]/25 pointer-events-none" />
+        {/* Soft overlay tint */}
+        <div className="absolute inset-0 bg-[#FAB1AA]/40 pointer-events-none" />
 
       </div>
 
@@ -74,12 +74,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
         
         {/* Top Logo/Monogram */}
         <FadeIn show={visible} delay={300} className="mb-auto mt-8">
-          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-[#B9AACB]/50 flex items-center justify-center backdrop-blur-md bg-[#6A4F82]/30 shadow-lg">
+          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-[#F3D1C8]/50 flex items-center justify-center backdrop-blur-md bg-[#F3D1C8]/30 shadow-lg">
             {/* Monogram Image - White version */}
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 brightness-0 invert">
               <Image
-                src="/monogram/monogram.png"
-                alt="Catherine & Mark Monogram"
+                src="/monogram/mongoram.png"
+                alt="JC & Queenee Monogram"
                 fill
                 className="object-contain drop-shadow-lg"
                 priority
@@ -122,11 +122,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
             onClick={() => {
               onOpen();
             }}
-            className="group relative px-10 py-4 bg-[#6A4F82] text-[#F4F4F4] font-serif text-sm tracking-[0.2em] uppercase transition-all duration-500 hover:bg-[#B9AACB] shadow-lg hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 rounded-sm overflow-hidden border border-[#B9AACB]/30"
+            className="group relative px-10 py-4 bg-[#EAD5C4] font-serif text-sm tracking-[0.2em] uppercase transition-all duration-500 hover:opacity-90 shadow-lg hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 rounded-sm overflow-hidden border border-[#EAD5C4]/50"
           >
             <span
-              className="relative z-10 text-white drop-shadow-md"
-              style={{ fontFamily: '"Cinzel", serif', fontWeight: 500 }}
+              className="relative z-10 drop-shadow-md"
+              style={{ fontFamily: '"Cinzel", serif', fontWeight: 500, color: '#675553' }}
             >
               Open Invitation
             </span>

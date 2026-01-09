@@ -45,7 +45,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Is there a dress code?",
     answer:
-      `Yes! We kindly request our guests to dress in formal attire matching our Purple & Sage motif. Please see the Attire section in Details for specific guidelines:\n\nPrincipal Sponsors:\n• Male: ${siteConfig.dressCode.sponsors.male}\n• Female: ${siteConfig.dressCode.sponsors.female}\n\nGuests:\n• Gents: ${siteConfig.dressCode.guests.gents}\n• Ladies: ${siteConfig.dressCode.guests.ladies}`,
+      `Yes! We kindly request our guests to dress in formal attire matching our ${siteConfig.dressCode.theme}. Please see the Attire section in Details for specific guidelines:\n\nPrincipal Sponsors:\n• Male: ${siteConfig.dressCode.sponsors.male}\n• Female: ${siteConfig.dressCode.sponsors.female}\n\nGuests:\n• Gents: ${siteConfig.dressCode.guests.gents}\n• Ladies: ${siteConfig.dressCode.guests.ladies}\n\n${siteConfig.dressCode.note}`,
   },
   {
     question: "Will there be assigned seating?",
@@ -77,6 +77,26 @@ const faqItems: FAQItem[] = [
     answer:
       "Both the ceremony and reception will be held at covered venues, so we're prepared for any weather. However, we recommend checking the weather forecast and dressing accordingly.",
   },
+  {
+    question: "Where exactly is the venue located?",
+    answer:
+      `Our wedding will be held at ${siteConfig.ceremony.venue}, located at ${siteConfig.ceremony.location}. You can find detailed directions and maps in the Details section above, or use the "Get Directions" button to open Google Maps.`,
+  },
+  {
+    question: "What payment methods are available for gifts?",
+    answer:
+      "We have two convenient payment options available in our Gift Guide section:\n\n• BPI Bank: Bank transfer via BPI\n• GCash: Mobile payment via GCash\n\nSimply toggle between the options in the Gift Guide section to view the QR code for your preferred payment method.",
+  },
+  {
+    question: "How can I share my photos and videos from the wedding?",
+    answer:
+      `We'd love to see your photos and videos! Please check the Snap & Share section for details. You can scan the QR code to access our shared folder, create a folder with your name, and upload your photos and videos from the wedding reception. Don't forget to use our hashtag ${siteConfig.snapShare.hashtag} when sharing on social media!`,
+  },
+  {
+    question: "What if I can't attend the wedding?",
+    answer:
+      `We understand that not everyone may be able to join us in person. If you're unable to attend, please still RSVP through the guest list section and select "No" so we can plan accordingly. Your well-wishes and prayers mean the world to us, and we'd love to celebrate with you in spirit!`,
+  },
 ]
 
 export function FAQ() {
@@ -89,14 +109,14 @@ export function FAQ() {
   return (
     <Section
       id="faq"
-      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-[#6A4F82]"
+      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-[#B47377]"
     >
-      {/* Background elements with purple & sage motif */}
+      {/* Background elements with pink & peach motif */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Subtle gradient overlays */}
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#6A4F82]/85 via-[#B9AACB]/60 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#6A4F82]/90 via-[#B9AACB]/55 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(185,170,203,0.22),transparent_55%)] opacity-80" />
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#B47377]/85 via-[#F3D1C8]/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#B47377]/90 via-[#F3D1C8]/55 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(243,209,200,0.22),transparent_55%)] opacity-80" />
       </div>
 
       {/* Section Header */}
@@ -127,8 +147,8 @@ export function FAQ() {
       {/* FAQ content */}
       <div className="relative z-30 max-w-4xl mx-auto px-3 sm:px-5">
         {/* Main card */}
-        <div className="relative bg-[#F4F4F4]/95 backdrop-blur-md border border-[#B9AACB]/60 rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_20px_60px_rgba(106,79,130,0.3)] overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#B9AACB]/10 via-transparent to-[#6A4F82]/5 pointer-events-none" />
+        <div className="relative bg-[#F4F4F4]/95 backdrop-blur-md border border-[#F3D1C8]/60 rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_20px_60px_rgba(180,115,119,0.3)] overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F3D1C8]/10 via-transparent to-[#B47377]/5 pointer-events-none" />
           
           {/* FAQ items */}
           <div className="relative p-2.5 sm:p-4 md:p-5 lg:p-6">
@@ -139,20 +159,20 @@ export function FAQ() {
                 return (
                   <div
                     key={index}
-                    className="rounded-lg sm:rounded-xl border border-[#B9AACB]/40 bg-white/50 hover:border-[#6A4F82]/60 hover:bg-white/70 transition-all duration-300 overflow-hidden shadow-sm"
+                    className="rounded-lg sm:rounded-xl border border-[#F3D1C8]/40 bg-white/50 hover:border-[#B47377]/60 hover:bg-white/70 transition-all duration-300 overflow-hidden shadow-sm"
                   >
                     <button
                       onClick={() => toggleItem(index)}
-                      className="group w-full px-2.5 sm:px-3 md:px-4 lg:px-5 py-2 sm:py-2.5 md:py-3 lg:py-4 flex items-center justify-between text-left outline-none focus-visible:ring-2 focus-visible:ring-[#6A4F82]/50 focus-visible:ring-offset-2 transition-colors"
+                      className="group w-full px-2.5 sm:px-3 md:px-4 lg:px-5 py-2 sm:py-2.5 md:py-3 lg:py-4 flex items-center justify-between text-left outline-none focus-visible:ring-2 focus-visible:ring-[#B47377]/50 focus-visible:ring-offset-2 transition-colors"
                       aria-expanded={isOpen}
                       aria-controls={contentId}
                     >
-                      <span className={`${cormorant.className} font-semibold text-[#6A4F82] pr-2 sm:pr-3 md:pr-4 text-xs sm:text-sm md:text-base lg:text-lg leading-snug sm:leading-relaxed transition-colors duration-200 group-hover:text-[#5B6B3C]`}>
+                      <span className={`${cormorant.className} font-semibold text-[#B47377] pr-2 sm:pr-3 md:pr-4 text-xs sm:text-sm md:text-base lg:text-lg leading-snug sm:leading-relaxed transition-colors duration-200 group-hover:text-[#B47377]/80`}>
                         {item.question}
                       </span>
                       <ChevronDown
                         size={18}
-                        className={`text-[#6A4F82]/60 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#6A4F82]" : ""} w-4 h-4 sm:w-5 sm:h-5`}
+                        className={`text-[#B47377]/60 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#B47377]" : ""} w-4 h-4 sm:w-5 sm:h-5`}
                         aria-hidden
                       />
                     </button>
@@ -165,13 +185,13 @@ export function FAQ() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-2.5 sm:px-3 md:px-4 lg:px-5 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-white/30 border-t border-[#B9AACB]/40">
+                        <div className="px-2.5 sm:px-3 md:px-4 lg:px-5 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-white/30 border-t border-[#F3D1C8]/40">
                           {item.answer.includes("[RSVP_LINK]") ? (
-                            <p className={`${cormorant.className} text-[#5B6B3C] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre-line tracking-wide`}>
+                            <p className={`${cormorant.className} text-[#51080F] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre-line tracking-wide`}>
                               {item.answer.split("[RSVP_LINK]")[0]}
                               <a 
                                 href="#guest-list" 
-                                className="text-[#6A4F82] underline font-bold hover:text-[#B9AACB] transition-colors"
+                                className="text-[#B47377] underline font-bold hover:text-[#F3D1C8] transition-colors"
                                 onClick={(e) => {
                                   e.preventDefault()
                                   document.getElementById('guest-list')?.scrollIntoView({ behavior: 'smooth' })
@@ -182,7 +202,7 @@ export function FAQ() {
                               {item.answer.split("[/RSVP_LINK]")[1]}
                             </p>
                           ) : (
-                            <p className={`${cormorant.className} text-[#5B6B3C] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre-line tracking-wide`}>
+                            <p className={`${cormorant.className} text-[#51080F] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre-line tracking-wide`}>
                               {item.answer}
                             </p>
                           )}
