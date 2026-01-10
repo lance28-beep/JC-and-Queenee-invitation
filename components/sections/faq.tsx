@@ -85,7 +85,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What payment methods are available for gifts?",
     answer:
-      "We have two convenient payment options available in our Gift Guide section:\n\n• BPI Bank: Bank transfer via BPI\n• GCash: Mobile payment via GCash\n\nSimply toggle between the options in the Gift Guide section to view the QR code for your preferred payment method.",
+      "We have two convenient payment options available in our Gift Guide section:\n\n• BPI Bank: Bank transfer via BPI\n• MariBank: Bank transfer via MariBank\n\nSimply toggle between the options in the Gift Guide section to view the QR code for your preferred payment method.",
   },
   {
     question: "How can I share my photos and videos from the wedding?",

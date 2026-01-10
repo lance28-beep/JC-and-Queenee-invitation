@@ -3,30 +3,9 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Section } from "@/components/section"
-import { Building2, Smartphone } from "lucide-react"
-
-const paymentMethods = {
-  bpi: {
-    id: "bpi",
-    label: "BPI Bank",
-    description: "Bank transfer via BPI",
-    qrSrc: "/QR/BPI.png",
-    Icon: Building2,
-  },
-  gcash: {
-    id: "gcash",
-    label: "GCash",
-    description: "Mobile payment via GCash",
-    qrSrc: "/QR/Gcash.png",
-    Icon: Smartphone,
-  },
-} as const
-
-type PaymentMethodKey = keyof typeof paymentMethods
 
 export function Registry() {
-  const [selectedMethod, setSelectedMethod] = useState<PaymentMethodKey>("bpi")
-  const paymentMethod = paymentMethods[selectedMethod]
+  const [selectedPayment, setSelectedPayment] = useState<"BPI" | "MariBank">("BPI")
 
   return (
     <Section
@@ -64,48 +43,46 @@ export function Registry() {
           {/* Payment Method Toggle */}
           <div className="relative z-10 mb-4 sm:mb-6">
             <div className="flex items-center justify-center gap-2 sm:gap-3">
-              {(Object.keys(paymentMethods) as PaymentMethodKey[]).map((key) => {
-                const method = paymentMethods[key]
-                const isSelected = selectedMethod === key
-                const Icon = method.Icon
-                
-                return (
-                  <button
-                    key={key}
-                    onClick={() => setSelectedMethod(key)}
-                    className={`flex items-center gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl transition-all duration-300 ${
-                      isSelected
-                        ? "bg-[#B47377] text-white shadow-md scale-105"
-                        : "bg-white/80 text-[#B47377] hover:bg-white/90 hover:scale-102"
-                    }`}
-                  >
-                    <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <span className="text-xs sm:text-sm md:text-base font-semibold">
-                      {method.label}
-                    </span>
-                  </button>
-                )
-              })}
+              <button
+                onClick={() => setSelectedPayment("BPI")}
+                className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm tracking-[0.1em] uppercase transition-all duration-300 ${
+                  selectedPayment === "BPI"
+                    ? "bg-[#B47377] text-white shadow-lg scale-105"
+                    : "bg-white/60 text-[#B47377] hover:bg-white/80"
+                }`}
+              >
+                BPI Bank
+              </button>
+              <button
+                onClick={() => setSelectedPayment("MariBank")}
+                className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm tracking-[0.1em] uppercase transition-all duration-300 ${
+                  selectedPayment === "MariBank"
+                    ? "bg-[#B47377] text-white shadow-lg scale-105"
+                    : "bg-white/60 text-[#B47377] hover:bg-white/80"
+                }`}
+              >
+                MariBank
+              </button>
             </div>
           </div>
 
           <div className="relative z-10">
             <div className="relative bg-white/95 rounded-xl sm:rounded-2xl border-2 border-dashed border-[#F3D1C8]/40 p-5 sm:p-6 md:p-8 text-center shadow-[0_6px_24px_rgba(180,115,119,0.15)]">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#F4F4F4] px-3 py-1 rounded-full shadow-sm border-2 border-[#F3D1C8]/50 text-xs font-semibold tracking-[0.2em] text-[#B47377] uppercase">
-                {paymentMethod.label}
+                {selectedPayment === "BPI" ? "BPI Bank" : "MariBank"}
               </div>
               <div className="flex flex-col items-center gap-4 w-full">
                 <div className="w-56 h-56 sm:w-64 sm:h-64 border-2 border-dashed border-[#F3D1C8]/40 rounded-xl sm:rounded-2xl flex items-center justify-center bg-white relative overflow-hidden">
                   <Image
-                    src={paymentMethod.qrSrc}
-                    alt={`${paymentMethod.label} QR code`}
+                    src={selectedPayment === "BPI" ? "/QR/BPI.png" : "/QR/MariBank.png"}
+                    alt={selectedPayment === "BPI" ? "BPI Bank QR code" : "MariBank QR code"}
                     fill
                     sizes="256px"
                     className="object-contain p-4"
                   />
                 </div>
                 <p className="text-sm sm:text-base text-[#B47377] max-w-md">
-                  Scan the QR code to make a {selectedMethod === "gcash" ? "mobile payment" : "bank transfer"}.
+                  Scan the QR code to make a bank transfer.
                 </p>
               </div>
             </div>

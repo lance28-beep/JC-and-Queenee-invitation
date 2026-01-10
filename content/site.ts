@@ -15,7 +15,7 @@ export const siteConfig = {
   },
   details: {
     rsvp: {
-      deadline: "December 31, 2025",
+      deadline: "January 31, 2026",
     },
   },
   ceremony: {
@@ -64,7 +64,7 @@ Now, as they prepare to say yes before God and the people they love most, Cather
   },
   snapShare: {
     googleDriveLink: "https://drive.google.com/drive/folders/1PavE86obEedEUGQwWcprTmiqv8eDakS4?usp=sharing",
-    hashtag: "#JCfoundhisQUEENee",
+    hashtag: "#MayQUEENnasiJC",
     instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
 }

@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
             {/* Monogram Image - White version */}
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 brightness-0 invert">
               <Image
-                src="/monogram/mongoram.png"
+                src="/monogram/monogramnew.png"
                 alt="JC & Queenee Monogram"
                 fill
                 className="object-contain drop-shadow-lg"

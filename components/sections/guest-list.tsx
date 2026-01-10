@@ -19,6 +19,7 @@ import {
   Users,
 } from "lucide-react"
 import { Cormorant_Garamond } from "next/font/google"
+import { siteConfig } from "@/content/site"
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -400,6 +401,10 @@ export function GuestList() {
         
         <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/90 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           Please search for your name below to confirm your presence at our special day
+        </p>
+        
+        <p className={`${cormorant.className} text-xs sm:text-sm text-white/85 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
+          Please RSVP on or before <span className="font-semibold text-white">{siteConfig.details.rsvp.deadline}</span>
         </p>
         
         {/* Decorative element below subtitle */}
