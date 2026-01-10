@@ -88,10 +88,10 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             {/* Monogram Logo - Elegant presentation - responsive sizing */}
             <div className="relative flex flex-col items-center justify-center z-10">
               {/* Logo with sophisticated shadow */}
-              <div className="relative w-28 sm:w-40 h-28 sm:h-40 brightness-0 invert">
+              <div className="relative w-32 sm:w-48 h-32 sm:h-48 brightness-0 invert">
                 <div className="absolute inset-0 blur-xl bg-white/30" />
                 <Image
-                  src="/monogram/monogramnew.png"
+                  src="/monogram/newmonogram2.png"
                   alt="JC & Queenee Monogram"
                   fill
                   className="object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"

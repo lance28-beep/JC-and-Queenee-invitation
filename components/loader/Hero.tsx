@@ -74,11 +74,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
         
         {/* Top Logo/Monogram */}
         <FadeIn show={visible} delay={300} className="mb-auto mt-8">
-          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-[#F3D1C8]/50 flex items-center justify-center backdrop-blur-md bg-[#F3D1C8]/30 shadow-lg">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-[#F3D1C8]/50 flex items-center justify-center backdrop-blur-md bg-[#F3D1C8]/30 shadow-lg">
             {/* Monogram Image - White version */}
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 brightness-0 invert">
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 brightness-0 invert">
               <Image
-                src="/monogram/monogramnew.png"
+                src="/monogram/newmonogram2.png"
                 alt="JC & Queenee Monogram"
                 fill
                 className="object-contain drop-shadow-lg"
